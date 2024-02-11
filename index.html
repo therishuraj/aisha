@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aisha</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- This is a recreation of Unfold's (https://dribbble.com/unfold) parallax scene: https://cdn.dribbble.com/users/14268/screenshots/3275340/northface.gif -->
+    <div class="scrollDist"></div>
+    <div class="main">
+        <svg viewBox="0 0 1200 1000" xmlns="http://www.w3.org/2000/svg">
+            <mask id="m">
+                <g class="cloud1">
+                    <rect fill="#fff" width="100%" height="801" y="799" />
+                    <image xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg" width="1800" height="1000" />
+                </g>
+            </mask>
+
+            <image class="sky" xlink:href="https://assets.codepen.io/721952/sky.jpg" width="1200" height="590" />
+            <image class="mountBg" xlink:href="https://assets.codepen.io/721952/mountBg.png" width="1200"
+                height="800" />
+            <image class="mountMg" xlink:href="https://assets.codepen.io/721952/mountMg.png" width="1200"
+                height="800" />
+            <image class="cloud2" xlink:href="https://assets.codepen.io/721952/cloud2.png" width="1200" height="800" />
+            <image class="mountFg" xlink:href="https://assets.codepen.io/721952/mountFg.png" width="1200"
+                height="800" />
+            <image class="cloud1" xlink:href="https://assets.codepen.io/721952/cloud1.png" width="1200" height="800" />
+            <image class="cloud3" xlink:href="https://assets.codepen.io/721952/cloud3.png" width="1200" height="800" />
+            <text fill="#fff" x="350" y="200">WHISPERS</text>
+            <polyline class="arrow" fill="#fff"
+                points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250" />
+
+            <g mask="url(#m)">
+                <rect fill="#fff" width="100%" height="100%" />
+                <text x="440" y="200" fill="#162a43" font-size="44">The Unopened Pages</text>
+
+                <text x="500" y="225" fill="#162a43" font-family="cursive" font-size="14">
+                    In the realm of curls, an ocean gaze so deep,
+                </text>
+                <text x="500" y="250" fill="#162a43" font-family="cursive" font-size="14">
+                    A mystery unfolds, secrets she keeps.
+                </text>
+                <text x="500" y="275" fill="#162a43" font-family="cursive" font-size="14">
+                    A book with pages untold, in hues of purple bold,
+                </text>
+                <text x="500" y="300" fill="#162a43" font-family="cursive" font-size="14">
+                    A symphony of words, a story to be told.
+                </text>
+
+                <text x="500" y="350" fill="#162a43" font-family="cursive" font-size="14">
+                    Eyes like galaxies, a world to explore,
+                </text>
+                <text x="500" y="375" fill="#162a43" font-family="cursive" font-size="14">
+                    A heart that whispers, yet craves for more.
+                </text>
+                <text x="500" y="400" fill="#162a43" font-family="cursive" font-size="14">
+                    Between fiction and truth, she gracefully weaves,
+                </text>
+                <text x="500" y="425" fill="#162a43" font-family="cursive" font-size="14">
+                    A tapestry of dreams, a love that conceives.
+                </text>
+
+                <text x="500" y="475" fill="#162a43" font-family="cursive" font-size="14">
+                    In innocence, a charm, in maturity, grace,
+                </text>
+                <text x="500" y="500" fill="#162a43" font-family="cursive" font-size="14">
+                    A delicate balance, a captivating embrace.
+                </text>
+                <text x="500" y="525" fill="#162a43" font-family="cursive" font-size="14">
+                    She reads in whispers, music in her soul,
+                </text>
+                <text x="500" y="550" fill="#162a43" font-family="cursive" font-size="14">
+                    A symphony of stories, making her heart whole.
+                </text>
+
+                <text x="500" y="600" fill="#162a43" font-family="cursive" font-size="14">
+                    Thriller, romance, and fiction intertwine,
+                </text>
+                <text x="500" y="625" fill="#162a43" font-family="cursive" font-size="14">
+                    In the library of her heart, love's the sign.
+                </text>
+                <text x="500" y="650" fill="#162a43" font-family="cursive" font-size="14">
+                    She talks in riddles, a language unknown,
+                </text>
+                <text x="500" y="675" fill="#162a43" font-family="cursive" font-size="14">
+                    Yet, in each conversation, a connection has grown.
+                </text>
+
+                <text x="500" y="720" fill="#162a43" font-family="cursive" font-size="14">
+                    Her world, a canvas, painted in purple hue,
+                </text>
+                <text x="500" y="745" fill="#162a43" font-family="cursive" font-size="14">
+                    A masterpiece unfolding, a love so true.
+                </text>
+                <text x="500" y="770" fill="#162a43" font-family="cursive" font-size="14">
+                    A book I yearn to read, to hold forever near,
+                </text>
+                <text x="500" y="795" fill="#162a43" font-family="cursive" font-size="14">
+                    In the chapters of her heart, my story to appear.
+                </text>
+
+            </g>
+
+            <rect id="arrowBtn" width="100" height="100" opacity="0" x="550" y="220" style="cursor:pointer" />
+        </svg>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
